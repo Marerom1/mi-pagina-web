@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto STEAM</title>
+
+    <link rel="stylesheet" href="login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Marca de agua -->
+<div class="marca-agua">
+    PROYECTO STEAM<br>
+    UEFG<br>
+    ÁREA INFORMÁTICA
+</div>
+
+<div class="contenedor">
+
+<div class="login">
+
+<div class="logo">
+
+<img src="imagenes/logo.jpg" alt="logo">
+
+</div>
+
+<h1>PROYECTO STEAM</h1>
+
+<h3>Diseño y Gestión de un Sistema de Energía Solar</h3>
+
+<form id="loginForm">
+
+<label>Usuario</label>
+
+<input
+type="text"
+id="usuario"
+placeholder="Ingrese su usuario"
+required>
+
+<label>Contraseña</label>
+
+<input
+type="password"
+id="password"
+placeholder="Ingrese su contraseña"
+required>
+
+<button type="submit">
+
+INGRESAR
+
+</button>
+
+<p id="mensaje"></p>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let usuario=document.getElementById("usuario").value;
+
+let password=document.getElementById("password").value;
+
+if(usuario=="admin" && password=="12345"){
+
+window.location="index.html";
+
+}else{
+
+document.getElementById("mensaje").innerHTML="Usuario o contraseña incorrectos";
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
